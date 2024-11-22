@@ -1,0 +1,548 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+hhtml {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #2C3E50; /* Cinza escuro */
+    background-color: #ECF0F1; /* Cinza claro */
+}
+
+h1 {
+    font-family: 'Merriweather', serif;
+    color: #ECF0F1; /* Azul marinho escuro */
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    color: #2C3E50; /* Cinza escuro */
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #ECF0F1; /* Azul marinho mais claro */
+}
+
+header {
+    background-color: #2C3E50; /* Azul marinho escuro */
+    color: #FFFFFF; /* Branco */
+    padding: 1em 0;
+    text-align: center;
+}
+
+header .menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header .menu li {
+    display: inline;
+}
+
+header .menu a {
+    text-decoration: none;
+    color: #FFFFFF; /* Branco */
+    font-weight: bold;
+}
+
+header .menu a:hover {
+    color: #BDC3C7; /* Cinza claro no hover */
+}
+
+main {
+    padding: 20px;
+}
+
+#destaque {
+    padding: 40px 20px;
+    background-color: #BDC3C7; /* Cinza claro */
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 1000px;
+}
+
+.carrossel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slides article {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.slides img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #2C3E50; /* Azul marinho escuro */
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button.prev:hover, button.next:hover {
+    background-color: #34495E; /* Azul marinho mais claro no hover */
+}
+
+#ultimas-noticias {
+    padding: 40px 20px;
+    background-color: #34495E; /* Azul marinho */
+    text-align: center;
+}
+
+.noticias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.noticia {
+    background-color: #ECF0F1; /* Cinza claro */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    box-sizing: border-box;
+}
+
+.noticia img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.noticia h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #2C3E50; /* Cinza escuro */
+}
+
+.noticia p {
+    font-size: 0.9em;
+    color: #666; /* Cinza mais claro */
+}
+
+#sobre-categorias {
+    padding: 40px 20px;
+    background-color: #FFFFFF; /* Branco */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+.explicacao-categorias h2 {
+    text-align: center;
+    color: #34495E; /* Azul marinho */
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.explicacao-categorias p {
+    color: #2C3E50; /* Cinza escuro */
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.explicacao-categorias ul {
+    list-style: disc;
+    padding-left: 40px;
+}
+
+.explicacao-categorias ul li {
+    color: #555; /* Cinza claro */
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.explicacao-categorias ul li strong {
+    color: #34495E; /* Azul marinho para destaque */
+}
+
+@media (max-width: 480px) {
+    #sobre-categorias {
+        padding: 20px 10px;
+    }
+
+    .explicacao-categorias h2 {
+        font-size: 20px;
+    }
+
+    .explicacao-categorias p, .explicacao-categorias ul li {
+        font-size: 14px;
+    }
+}
+
+#conscientizacao {
+    background: #2C3E50; /* Azul marinho */
+    color: #BDC3C7; /* Branco */
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 900px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.conteudo-conscientizacao h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.conteudo-conscientizacao p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.conteudo-conscientizacao blockquote {
+    font-style: italic;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-left: 5px solid #fff;
+    margin: 20px auto;
+    color: #f0f0f0;
+    max-width: 600px;
+    border-radius: 5px;
+}
+
+.conteudo-conscientizacao button {
+    background: #FFFFFF; /* Branco */
+    color: #2C3E50; /* Azul marinho */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.conteudo-conscientizacao button:hover {
+    background: #2C3E50; /* Azul marinho no hover */
+    color: #FFFFFF; /* Branco no hover */
+}
+
+@media (max-width: 480px) {
+    .conteudo-conscientizacao h2 {
+        font-size: 22px;
+    }
+
+    .conteudo-conscientizacao p {
+        font-size: 16px;
+    }
+
+    .conteudo-conscientizacao blockquote {
+        font-size: 14px;
+    }
+}
+
+#estudos-academicos {
+    padding: 40px 20px;
+    background-color: #FFFFFF; /* Fundo neutro */
+    border-top: 3px solid #2C3E50; /* Linha superior em azul marinho */
+    margin-top: 20px;
+}
+
+.conteudo-estudos h2 {
+    text-align: center;
+    font-size: 26px;
+    color: #2C3E50; /* Azul marinho */
+    margin-bottom: 20px;
+}
+
+.conteudo-estudos p {
+    text-align: center;
+    font-size: 16px;
+    color: #555; /* Cinza claro */
+    margin-bottom: 30px;
+}
+
+.cartoes-estudos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.cartao-estudo {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 220px;
+    flex: 1 1 200px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cartao-estudo h3 {
+    font-size: 18px;
+    color: #2C3E50; /* Azul marinho */
+    margin-bottom: 8px;
+}
+
+.cartao-estudo p {
+    font-size: 14px;
+    color: #2C3E50; /* Cinza escuro */
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.cartao-estudo a {
+    font-size: 14px;
+    color: #1F3A93
+}
+
+.cartao-estudo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .cartoes-estudos {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .cartao-estudo {
+        max-width: 150px;
+        flex: 1 1 150px;
+    }
+
+    .cartao-estudo h3 {
+        font-size: 16px;
+    }
+
+    .cartao-estudo p {
+        font-size: 12px;
+    }
+}
+
+#acoes-preventivas {
+    background: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.carrossel-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carrossel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carrossel-item {
+    min-width: 100%;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.carrossel-item h3 {
+    color: #34495E; /* Azul marinho */
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.carrossel-item p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+button.carrossel-anterior,
+button.carrossel-proximo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #2C3E50; /* Azul marinho escuro */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    z-index: 10;
+}
+
+button.carrossel-anterior {
+    left: 10px;
+}
+
+button.carrossel-proximo {
+    right: 10px;
+}
+
+button.carrossel-anterior:hover,
+button.carrossel-proximo:hover {
+    background: #34495E; /* Azul marinho no hover */
+}
+
+@media (max-width: 768px) {
+    .carrossel-item h3 {
+        font-size: 18px;
+    }
+
+    .carrossel-item p {
+        font-size: 14px;
+    }
+
+    button.carrossel-anterior,
+    button.carrossel-proximo {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+
+#abusos {
+    padding: 40px 20px;
+    background-color: #BDC3C7; /* Cinza claro */
+    text-align: center;
+}
+
+.abusos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.abuso {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    box-sizing: border-box;
+}
+
+.abuso h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #34495E; /* Azul marinho */
+}
+
+.abuso p {
+    font-size: 1em;
+    color: #333;
+}
+
+.abuso h4 {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #34495E; /* Azul marinho */
+}
+
+#inclusao-social {
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ECF0F1; /* Cinza claro */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 900px;
+}
+
+#inclusao-social h2 {
+    font-size: 2.5em; /* Aumenta a ênfase no título */
+    color: #34495E; /* Azul marinho */
+}
+
+#inclusao-social p {
+    margin: 15px 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+#inclusao-social .inclusao-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    background-color: #2C3E50; /* Azul marinho */
+    color: #fff;
+    font-size: 1.1em;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Efeito de transição suave */
+}
+
+#inclusao-social .inclusao-link:hover {
+    background-color: #34495E; /* Azul marinho no hover */
+}
+
+footer {
+    background-color: #2C3E50; /* Azul marinho escuro */
+    color: #fff;
+    text-align: center;
+    padding: 1.5em 0;
+    font-size: 1.2em;
+}
+
+footer nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer nav a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease; /* Transição suave no hover */
+}
+
+footer nav a:hover {
+    color: #BDC3C7; /* Cinza claro no hover */
+}
